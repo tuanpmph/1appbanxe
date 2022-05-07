@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GiohangActivity">
+    <TextView
+        android:gravity="center"
+        android:textSize="18dp"
+        android:text="Gio Hang Trong"
+        android:id="@+id/txtgiohangtrong"
+        android:visibility="gone"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:id="@+id/toobar"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:title="Giỏ hàng"
+        android:background="#878F0F"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recycleviewgiohang"
+        app:layout_constraintTop_toBottomOf="@+id/toobar"
+        app:layout_constraintBottom_toTopOf="@id/layout1"
+        android:layout_margin="5dp"/>
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:weightSum="2"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/btnmuahang">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#DF1010"
+            android:text="Tổng tiền: "
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txttongtien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="50.000"
+            android:textColor="#B50C0C"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <Button
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btnmuahang"
+        android:text="Mua hàng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

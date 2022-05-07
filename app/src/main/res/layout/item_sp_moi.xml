@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="4dp">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/inonnew"
+            android:layout_gravity="top|right"/>
+        <LinearLayout
+            android:background="@color/teal_200"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/itemsp_image"
+                android:layout_width="190dp"
+                android:layout_height="145dp"
+                android:src="@drawable/ic_baseline_perm_media_24"/>
+            <TextView
+                android:id="@+id/itemsp_ten"
+                android:text="Xe MoTo"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+
+                android:id="@+id/itemps_gia"
+                android:text="Gia :250000d"
+                android:textColor="@color/maumoi"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
